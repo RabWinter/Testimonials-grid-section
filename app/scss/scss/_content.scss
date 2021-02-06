@@ -1,0 +1,164 @@
+.cards {
+ display: grid;
+ grid-template-columns: auto;
+ gap: 1.5rem;
+ padding: 2rem 0;
+
+ @include breakpoint-up(large) {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+ }
+
+ @include breakpoint-up(medium) {
+  grid-template-rows: repeat (4, 1fr);
+ }
+
+ &__user--header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+ }
+
+ &__header--wrap {
+  padding-left: 0.9rem;
+ }
+
+ &__light--title {
+  color: $lightGrayishBlue;
+ }
+
+ &__dark--title {
+  color: $darkGrayishBlue;
+ }
+
+ &__light--sub {
+  color: hsla(210, 46%, 95%, 0.493);
+ }
+
+ &__dark--sub {
+  color: hsla(217, 30%, 14%, 0.493);
+ }
+
+ &__light--text {
+  color: $lightGrayishBlue;
+ }
+
+ &__dark--text {
+  color: $darkGrayishBlue;
+ }
+
+ &__light--quote {
+  color: hsla(210, 46%, 95%, 0.699);
+ }
+
+ &__dark--quote {
+  color: hsla(217, 30%, 14%, 0.699);
+ }
+
+ &__item {
+  border-radius: 0.625rem;
+  margin: 0 1.25rem;
+  padding: 1.8rem 2.2rem 2rem 2.2rem;
+
+  @include breakpoint-up(medium) {
+   margin: 0;
+  }
+
+  img {
+   height: 2.2rem;
+   width: 2.2rem;
+   border-radius: 50px;
+  }
+
+  ///// Daniel /////
+  &:first-child {
+   background-color: $violet;
+   background-image: url("/images/bg-pattern-quotation.svg");
+   background-repeat: no-repeat;
+   background-position: top right 1.5625rem;
+
+   @include breakpoint-up(medium) {
+    grid-column: span 4;
+    grid-row: 1;
+   }
+
+   @include breakpoint-up(large) {
+    background-position: top right 4.375rem;
+    grid-column: span 2;
+   }
+
+   img {
+    border: 2px solid hsla(0, 0%, 100%, 0.329);
+   }
+  }
+
+  ///// Johnathan /////
+  &:nth-child(2) {
+   background-color: $darkGrayishBlue;
+
+   @include breakpoint-up(medium) {
+    grid-row: 2;
+    grid-column: span 2;
+   }
+
+   @include breakpoint-up(large) {
+    grid-column: 3;
+    grid-row: 1;
+   }
+  }
+
+  ///// Jeanette /////
+  &:nth-child(3) {
+   background-color: $white;
+
+   @include breakpoint-up(medium) {
+    grid-column: span 2;
+    grid-row: 3;
+   }
+
+   @include breakpoint-up(large) {
+    grid-row: 2;
+    grid-column: span 1;
+   }
+  }
+
+  ///// Patrick /////
+  &:nth-child(4) {
+   background-color: $darkBlackishBlue;
+
+   @include breakpoint-up(medium) {
+    // grid-column: 3;
+    grid-row: 4;
+   }
+
+   @include breakpoint-up(large) {
+    grid-column: span 2;
+    grid-row: 2;
+   }
+
+   img {
+    border: 2px solid hsl(263, 55%, 52%);
+   }
+  }
+
+  ///// Kira /////
+  &:nth-child(5) {
+   background-color: $white;
+
+   @include breakpoint-up(medium) {
+    grid-column: span 2;
+   }
+
+   @include breakpoint-up(large) {
+    grid-column: 4;
+   }
+  }
+ }
+}
+
+.attribution {
+ text-align: center;
+ padding-bottom: 1rem;
+ color: $darkBlackishBlue;
+ font-size: 0.9rem;
+}
